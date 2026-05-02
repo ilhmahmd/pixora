@@ -57,7 +57,7 @@ export default function Navbar() {
   return (
     <nav style={{ ...styles.nav, ...(scrolled ? styles.navScrolled : {}) }}>
       <div style={styles.logo}>
-        Pixora
+        Movement
       </div>
       <button
         style={styles.cta}

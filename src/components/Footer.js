@@ -20,7 +20,7 @@ export default function Footer() {
         Pixora<span style={{ color: 'var(--accent)' }}>.</span>Studio
       </div>
       <p style={{ fontSize: 13, color: 'var(--muted)' }}>
-        © {new Date().getFullYear()} Pixora Studio. Semua hak dilindungi.
+        © {new Date().getFullYear()} Movement Studio. Semua hak dilindungi.
       </p>
       <p style={{ fontSize: 13, color: 'var(--muted)' }}>
         Bandung, Indonesia
