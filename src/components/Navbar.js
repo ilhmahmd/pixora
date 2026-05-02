@@ -1,43 +1,51 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
 
 const styles = {
   nav: {
     position: 'fixed',
     top: 0, left: 0, right: 0,
     zIndex: 100,
-    height: 64,
+    height: 90,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '0 5%',
-    transition: 'background 0.3s, border-bottom 0.3s',
+    padding: '0 10%',
+    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
   },
   navScrolled: {
-    background: 'rgba(11,12,16,0.88)',
-    backdropFilter: 'blur(16px)',
-    WebkitBackdropFilter: 'blur(16px)',
-    borderBottom: '1px solid rgba(255,255,255,0.08)',
+    height: 72,
+    background: 'rgba(11,12,16,0.85)',
+    backdropFilter: 'blur(20px)',
+    WebkitBackdropFilter: 'blur(20px)',
+    borderBottom: '1px solid var(--border)',
   },
   logo: {
     fontFamily: 'var(--font-display)',
-    fontWeight: 700,
-    fontSize: 20,
-    letterSpacing: '-0.5px',
+    fontWeight: 800,
+    fontSize: 22,
+    letterSpacing: '-1px',
     color: 'var(--text)',
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center',
   },
-  logoAccent: { color: 'var(--accent)' },
   cta: {
     background: 'var(--accent)',
     color: '#0B0C10',
     fontFamily: 'var(--font-display)',
-    fontWeight: 700,
-    fontSize: 13,
-    padding: '9px 22px',
+    fontWeight: 800, // Font lebih tebal
+    fontSize: 14,
+    padding: '14px 32px', // Padding horizontal ditambah agar "gendut"
     borderRadius: 'var(--radius-pill)',
     border: 'none',
-    letterSpacing: '0.2px',
-    transition: 'transform 0.2s, box-shadow 0.2s',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 10,
     cursor: 'pointer',
+    textDecoration: 'none',
+    boxShadow: '0 4px 15px rgba(200,240,78,0.1)',
   },
 };
 
@@ -45,7 +53,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -56,23 +64,30 @@ export default function Navbar() {
 
   return (
     <nav style={{ ...styles.nav, ...(scrolled ? styles.navScrolled : {}) }}>
-      <div style={styles.logo}>
+      <a href="/" style={styles.logo}>
         Movement Studio
-      </div>
-      <button
-        style={styles.cta}
+      </a>
+
+      <motion.button
         onClick={handleCta}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-1px)';
-          e.currentTarget.style.boxShadow = '0 6px 24px rgba(200,240,78,0.3)';
+        whileHover={{ 
+          y: -2, 
+          scale: 1.02,
+          boxShadow: '0 8px 24px rgba(200,240,78,0.3)' 
         }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = 'none';
-        }}
+        whileTap={{ scale: 0.96 }}
+        style={styles.cta}
       >
-        Konsultasi Gratis →
-      </button>
+        <MessageCircle size={18} strokeWidth={2.5} />
+        <span className="nav-cta-text">Konsultasi Gratis</span>
+      </motion.button>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .nav-cta-text { display: none; }
+          button { padding: 12px !important; } 
+        }
+      `}</style>
     </nav>
   );
 }
