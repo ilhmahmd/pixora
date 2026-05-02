@@ -17,7 +17,7 @@ export default function Footer() {
         fontWeight: 700,
         fontSize: 18,
       }}>
-        Movement<span style={{ color: 'var(--accent)' }}>.</span>Studio
+        Movement Studio
       </div>
       <p style={{ fontSize: 13, color: 'var(--muted)' }}>
         © {new Date().getFullYear()} Movement Studio. Semua hak dilindungi.
