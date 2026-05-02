@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function CtaFinal() {
-  const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent('Halo Pixora Studio, saya ingin konsultasi pembuatan website untuk bisnis saya.')}`;
+  const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent('Halo Movement Studio, saya ingin konsultasi pembuatan website untuk bisnis saya.')}`;
 
   return (
     <section style={{

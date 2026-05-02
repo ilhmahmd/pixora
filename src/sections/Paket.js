@@ -50,7 +50,7 @@ function PaketCard({ paket, variants }) {
   const [hovered, setHovered] = useState(false);
   const { featured, badge, name, price, priceNote, features, cocokUntuk, addons } = paket;
 
-  const waMessage = `Halo Pixora Studio, saya tertarik dengan paket ${name}. Bisa minta info lebih lanjut?`;
+  const waMessage = `Halo Movement Studio, saya tertarik dengan paket ${name}. Bisa minta info lebih lanjut?`;
   const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
 
   return (
@@ -250,7 +250,7 @@ export default function Paket() {
           textTransform: 'uppercase', 
           marginBottom: 16 
         }}>
-          Pilihan Investasi
+          PRICING
         </p>
         <h2 style={{ 
           fontSize: 'clamp(32px, 5vw, 48px)', 

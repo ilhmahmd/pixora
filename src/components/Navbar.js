@@ -51,7 +51,7 @@ export default function Navbar() {
   }, []);
 
   const handleCta = () => {
-    window.open('https://wa.me/6281234567890?text=Halo%20Pixora%20Studio%2C%20saya%20ingin%20konsultasi%20pembuatan%20website', '_blank');
+    window.open('https://wa.me/6281234567890?text=Halo%20Movement%20Studio%2C%20saya%20ingin%20konsultasi%20pembuatan%20website', '_blank');
   };
 
   return (
