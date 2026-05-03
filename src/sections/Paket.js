@@ -23,7 +23,7 @@ const paketData = [
   {
     id: 'company',
     name: 'Company Profile',
-    price: '1.300.000',
+    price: '1.100.000',
     priceNote: 'Mulai dari harga ini',
     featured: true,
     badge: 'Paling Diminati',
