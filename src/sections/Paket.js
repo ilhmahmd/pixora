@@ -5,14 +5,14 @@ const paketData = [
   {
     id: 'landing',
     name: 'Landing Page',
-    price: '650.000',
+    price: '500.000',
     priceNote: 'Bayar sekali, website siap pakai',
     featured: false,
     badge: null,
     features: [
       '1 halaman desain eksklusif & profesional',
       '1x revisi desain sebelum launching',
-      'Gratis hosting & domain 1 tahun',
+      'Gratis hosting & domain my.id 1 tahun',
       'Mobile-friendly & optimasi SEO dasar',
       'Formulir kontak atau CTA sesuai kebutuhan',
       'Integrasi Google Analytics & Facebook Pixel',
@@ -30,7 +30,7 @@ const paketData = [
     features: [
       '5 halaman (Home, Tentang, Layanan, Portofolio, Kontak)',
       '2x revisi desain sebelum launching',
-      'Gratis hosting & domain 1 tahun',
+      'Gratis hosting & domain my.id 1 tahun',
       'SEO basic setup & desain mobile-friendly',
       'Integrasi Google My Business & WhatsApp Chat',
       'Google Analytics & Facebook Pixel',
