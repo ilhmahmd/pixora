@@ -69,7 +69,7 @@ export default function Hero() {
             color: '#C8F04E',
             marginBottom: '32px',
             letterSpacing: '1px',
-            textTransform: 'uppercase',
+            // textTransform: 'uppercase',
             fontWeight: 600
           }}
         >
@@ -101,7 +101,7 @@ export default function Hero() {
             lineHeight: 1.6
           }}
         >
-          Kami bantu bisnis Anda tampil profesional di dunia digital dengan proses yang cepat dan hasil yang memukau.
+          Dari UMKM hingga startup, kami bantu bisnis Anda tampil profesional di dunia digital — cepat, terjangkau, dan berhasil.
         </motion.p>
 
         <motion.div variants={itemVariants} style={{ display: 'flex', gap: '16px' }}>
@@ -126,7 +126,7 @@ export default function Hero() {
             textDecoration: 'none',
             background: 'rgba(255,255,255,0.03)'
           }}>
-            Proses Kerja
+            Bagaimana Prosesnya?
           </a>
         </motion.div>
       </motion.section>
